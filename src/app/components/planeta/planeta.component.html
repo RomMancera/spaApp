@@ -1,0 +1,30 @@
+<body>
+
+    <!-- Jumbotron -->
+    <div class="card card-image" [ngStyle]="{'box-shadow': 'black'}" style=" background-image: url({{plan.img}});" [ngClass]="ocultar">
+        <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+            <div class="py-5 ">
+
+                <!-- Content -->
+                <h2 class="h2 orange-text " [ngClass]="tamanio" [ngStyle]="{'font-style': tipo}"> {{plan.nombre}} </h2>
+                <h4 class=" h4 my-4 py-2 " [ngClass]="color" [ngStyle]="{'font-style': tipo}">posicion: {{plan.posicion}}</h4>
+                <h4 [ngClass]="color " [ngStyle]="{'font-style': tipo}"> color: {{plan.colores}}</h4>
+                <h4 [ngClass]="color " [ngStyle]="{'font-style': tipo}">aceleracion gravitatoria: {{plan.aceleracion}}</h4>
+                <h4 [ngClass]="color" [ngStyle]="{'font-weight': '100'}">{{plan.caracteristicas}}</h4>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Jumbotron -->
+    <div class=" ">
+        <button type="button" class="btn btn-outline-secondary " (click)="ocultar='d-none'">Ocultar planeta</button>
+        <button type="button" class="btn btn-outline-danger bg-danger" (click)="color='text-danger'">Cambiar a color de texto</button>
+        <button type="button" class="btn btn-outline-primary " (click)="tamanio='text-capitalize'">Capitalizar titulo</button>
+        <label>tipo de fuente</label>
+        <input type="text" (input)="tipo = $event.target.value" value="italic">
+    </div>
+
+
+</body>
